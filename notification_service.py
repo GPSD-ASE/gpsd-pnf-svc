@@ -1,3 +1,5 @@
+pip install -r requirements.txt
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import firebase_admin
@@ -8,9 +10,9 @@ from typing import Dict, Optional
 app = FastAPI()
 
 # Firebase initialization
-cred = credentials.Certificate('/content/GPSD Google Firebase.json')
+cred = credentials.Certificate('GPSD Google Firebase.json')
 firebase_admin.initialize_app(cred, {
-    'databaseURL': ''
+    'databaseURL': '.env'
 })
 
 # Data Models
