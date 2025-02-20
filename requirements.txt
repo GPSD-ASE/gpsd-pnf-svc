@@ -1,0 +1,1 @@
+!pip install fastapi uvicorn firebase-admin pydanti pyngrok nest_asyncio
