@@ -10,7 +10,7 @@ app = FastAPI()
 # Firebase initialization
 cred = credentials.Certificate('/content/GPSD Google Firebase.json')
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://gpsd-notification-service-default-rtdb.europe-west1.firebasedatabase.app/'
+    'databaseURL': ''
 })
 
 # Data Models
