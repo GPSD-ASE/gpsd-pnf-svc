@@ -1,11 +1,8 @@
-# Environment variables
 .env
 
-# Firebase credentials
 firebase_credentials.json
 **/GPSD Google Firebase.json
 
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -27,7 +24,6 @@ var/
 .installed.cfg
 *.egg
 
-# IDEs and editors
 .idea/
 .vscode/
 *.swp
