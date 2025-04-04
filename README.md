@@ -1,7 +1,7 @@
 # gpsd-pnf-svc
-Notification Service Management
+Push Notification Service Management
 
-This is a Notification Service Management system that handles device registration and notification delivery. The service allows:
+This is a Push Notification Service Management system that handles device registration and notification delivery. The service allows:
 1. Registering devices with user IDs and device tokens
 2. Sending notifications to registered users
 3. Retrieving notifications for specific users
