@@ -6,6 +6,8 @@ This is a Push Notification Service Management system that handles device regist
 2. Sending notifications to registered users
 3. Retrieving notifications for specific users
 
+## Functionality
+
 The service is built using:
 - **FastAPI**: A modern, high-performance web framework for building APIs with Python
  
@@ -19,6 +21,8 @@ The service is built using:
 
 This follows an  architecture of RESTful API design pattern with endpoints for device registration, notification sending, and notification retrieval
 
+## Implementation
+
 **Firebase Integration**: The service uses Firebase for both authentication and data storage, with security rules defined for read/write access
 
 **Asynchronous API Design**: The endpoints are implemented as async functions, allowing for non-blocking I/O operations
@@ -30,6 +34,7 @@ This follows an  architecture of RESTful API design pattern with endpoints for d
 **Timestamp Server Value**: Uses Firebase's server timestamp feature to record when notifications are created
 
 ## Design
+
 **Repository Pattern**: Abstracting the data storage layer through Firebase references
 
 **Model-View-Controller (MVC)**: Separation of data models (Pydantic classes) from the controller logic (API routes)
