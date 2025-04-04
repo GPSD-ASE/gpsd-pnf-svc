@@ -29,7 +29,7 @@ This follows an  architecture of RESTful API design pattern with endpoints for d
 
 **Timestamp Server Value**: Uses Firebase's server timestamp feature to record when notifications are created
 
-
+## Design
 **Repository Pattern**: Abstracting the data storage layer through Firebase references
 
 **Model-View-Controller (MVC)**: Separation of data models (Pydantic classes) from the controller logic (API routes)
