@@ -8,13 +8,13 @@ This is a Notification Service Management system that handles device registratio
 
 The service is built using:
 - **FastAPI**: A modern, high-performance web framework for building APIs with Python
-- 
+ 
 - **Firebase Admin SDK**: Used for database operations and potentially notification delivery
-- 
+
 - **Uvicorn**: ASGI server for running the FastAPI application
-- 
+ 
 - **Pydantic**: For data validation and settings management
-- 
+ 
 - **Firebase Realtime Database**: For storing device registrations and notifications
 
 This follows an  architecture of RESTful API design pattern with endpoints for device registration, notification sending, and notification retrieval
