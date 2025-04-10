@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  notification-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: push-notification-service:latest
+    container_name: push-notification-service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
+      - FIREBASE_DATABASE_URL=${https://gpsd-notification-service-default-rtdb.europe-west1.firebasedatabase.app/
+}
+      - LOG_LEVEL=INFO
+      - WORKER_THREADS=4
+      - TZ=Asia/Kolkata
+    volumes:
+      - ./GPSD Google Firebase.json:/app/GPSD Google Firebase.json:ro
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - notification-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  # Optional Redis for caching and rate limiting (uncomment if needed)
+  # redis:
+  #   image: redis:alpine
+  #   container_name: notification-redis
+  #   restart: unless-stopped
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis-data:/data
+  #   networks:
+  #     - notification-network
+
+networks:
+  notification-network:
+    driver: bridge
+
+# Uncomment if using Redis
+# volumes:
+#   redis-data:
