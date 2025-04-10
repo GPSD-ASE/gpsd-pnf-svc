@@ -65,10 +65,6 @@ The service follows a layered architecture:
 ### Factory Pattern
 - Creates appropriate notification objects based on device type and payload
 
-### Dependency Injection
-- FastAPI's approach to handling dependencies and services
-- Promotes testability and separation of concerns
-
 ### Model-View-Controller (MVC)
 - **Models**: Pydantic classes define data structures
 - **Controllers**: API routes handle request processing
@@ -116,20 +112,3 @@ For more complex deployments, a docker-compose.yaml file is provided:
 ```bash
 docker-compose up -d
 ```
-
-## Getting Started
-
-1. Clone the repository
-2. Set up Firebase project and download credentials
-3. Configure environment variables
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run the service: `uvicorn main:app --reload`
-
-## Future Enhancements
-
-- Support for iOS devices through Apple Push Notification Service (APNS)
-- Web push notification support
-- Notification templates and localization
-- Scheduled and recurring notifications
-- Analytics and delivery reporting
-- Rate limiting and throttling
